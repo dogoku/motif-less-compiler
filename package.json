@@ -2,7 +2,8 @@
   "name": "motif-less-compiler",
   "version": "0.0.0",
   "description": "Motif Less Compiler",
-  "main": "index.js",
+  "main": "./lib/motif-less-compiler.js",
+  "bin": "./bin/motif-less-compiler-cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +19,7 @@
   "dependencies": {
     "less": "^1.7.0",
     "chokidar": "^0.8.1",
-    "bluebird": "^1.0.7"
+    "bluebird": "^1.0.7",
+    "fell": "0.0.2"
   }
 }
