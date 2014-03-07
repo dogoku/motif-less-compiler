@@ -4,9 +4,6 @@
   "description": "Motif Less Compiler",
   "main": "./lib/motif-less-compiler.js",
   "bin": "./bin/motif-less-compiler-cli.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/briandipalma/motif-less-compiler.git"
@@ -20,6 +17,6 @@
     "less": "^1.7.0",
     "chokidar": "^0.8.1",
     "bluebird": "^1.0.7",
-    "fell": "0.0.2"
+    "fell": "^0.0.2"
   }
 }
