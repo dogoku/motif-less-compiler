@@ -3,7 +3,7 @@ To Use
 
 Install by running
 
-`npm i -g briandipalma/motif-less-compiler`
+`npm i -g briandipalma/motif-less-compiler#1.0.0`
 
 Then `cd` into the root of your application e.g. `fxtrader` for the FxMotif.
 
