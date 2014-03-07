@@ -1,6 +1,6 @@
 {
   "name": "motif-less-compiler",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Motif Less Compiler",
   "main": "./lib/motif-less-compiler.js",
   "bin": "./bin/motif-less-compiler-cli.js",
