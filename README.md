@@ -1,3 +1,5 @@
+![](https://david-dm.org/briandipalma/motif-less-compiler.png)
+
 #Motif LESS compiler
 
 A custom LESS compiler for Bladerunner apps
