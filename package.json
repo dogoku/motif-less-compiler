@@ -2,7 +2,7 @@
   "name": "motif-less-compiler",
   "version": "1.0.0",
   "description": "Motif Less Compiler",
-  "main": "./lib/motif-less-compiler.js",
+  "main": "./lib/less-file-watcher.js",
   "bin": "./bin/motif-less-compiler-cli.js",
   "repository": {
     "type": "git",

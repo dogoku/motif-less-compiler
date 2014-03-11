@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 "use strict";
 
-var motifLessCompiler = require("../lib/motif-less-compiler");
+var motifLessWatcher = require("../lib/less-file-watcher");
 
-motifLessCompiler();
+motifLessWatcher();
