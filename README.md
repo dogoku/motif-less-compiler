@@ -1,36 +1,93 @@
-To Use
-------
+#Motif LESS compiler
 
-Install by running
+A custom LESS compiler for Bladerunner apps
 
-`npm i -g briandipalma/motif-less-compiler#1.0.0`
+##Usage
 
-Then `cd` into the root of your application e.g. `fxtrader` for the FxMotif.
+- Install by running
 
-Execute
+	`npm i -g briandipalma/motif-less-compiler#1.0.0`
 
-`motif-less-compiler`
+- Then `cd` into the root of your application e.g. `fxtrader` for the FxMotif.
 
+- Execute
+
+	`motif-less-compiler`
+
+**Note that:**
 Only errors generate console output, successful runs produce no output.
 
-To Develop
-----------
+##Configuration
 
-Firstly you must remove any installed version
+The compiler accepts a number of arguments either passed from the command line or via a config file
 
-`npm r -g motif-less-compiler`
+###Command line arguments
+
+| Argument           | Description                                  | Type    | Default       | Status         |
+|:-------------------|:---------------------------------------------|:--------|:-------------:|:--------------:|
+|`--autoprefix`      | Add auto-prefixer functionality to compiler  | Boolean | **false**     | Backlog        |
+|`-c, --config`      | Path to config file                          | Path    | `./config.js` | Done           |
+|`-g, --globals`     | Global import files                          | Boolean | **false**     | In development |
+|`-h, --help`        | Show usage and help information              | Boolean | **false**     | Done           |
+|`--ignorefiles`     | Ignore files with the given filenames        | Array   | `null`        | Backlog        |
+|`--ignorefolders`   | Ignore folders in the given array            | Array   | `null`        | Backlog        |
+|`--perforce`        | Use perforce to checkout files before saving | Boolean | **false**     | Backlog        |
+|`-t, --theme`       | Name of a Bladerunner theme to use           | Boolean | `cotton`      | Backlog        |
+|`-v, --verbose`     | Verbose mode                                 | Boolean | **false**     | Backlog        |
+|`-w, --watch`       | Watch directory for changes to LESS files    | Boolean | **false**     | In development |
+
+####Example usage
+
+Single letter arguments use one `-`. Everything else uses two `-`
+
+	motif-less-compiler -v --perforce
+
+You can force booleans to false, by using `no-`
+
+	motif-less-compiler --no-watch
+
+You can use declare the same argument multiple times for arrays
+
+###Config file
+
+The config.js file, is a JSON file with the configuration
+The arguments must be declared using their **long** format.
+
+
+####Example usage with config.js
+
+	motif-less-compiler -c path/to/my-config.js
+
+Config.js
+
+	{
+		"watch": false,
+		"ignoreFolders":[ ".svn", ".git", "node_modules" ],
+		"ignoreFiles": [ "variables.less", "mixins.less" ],
+		"theme": "cotton",
+		"globals":[
+			"/default-aspect/themes/cotton/ontology/variables.less",
+			"/default-aspect/themes/cotton/mixins.less"
+		]
+	};
+
+##Development
+
+Remove any previously installed version
+
+	`npm r -g motif-less-compiler`
 
 If you want to make a PR to the repo fork it.
-Clone the repo you wish to develop in.
 
-`git clone <repo-url>`
+- Clone the repo you wish to develop in.
+	`git clone <repo-url>`
 
-Then `cd` into the repo directory.
+- Then `cd` into the repo directory.
 
-Once inside the repo directory run
+- Once inside the repo directory run
 
-`npm link`
+	`npm link`
 
-Now when you execute `motif-less-compiler` your local cloned repo will be used.
+- Now when you execute `motif-less-compiler` your local cloned repo will be used.
 
-Work away.
+- Work away.
