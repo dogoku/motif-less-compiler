@@ -1,3 +1,5 @@
 # ignore npm files
 npm-debug.log
 node_modules/
+# ignore eclipse files
+.project
