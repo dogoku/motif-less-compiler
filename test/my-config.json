@@ -1,0 +1,5 @@
+{
+	"watch": true,
+	"theme": "danske",
+	"globals": "vars.less"
+}

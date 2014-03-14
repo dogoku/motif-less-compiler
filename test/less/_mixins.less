@@ -1,0 +1,9 @@
+.rem-font-size(@pixel-font-size, @base: @base-font-size) {
+	& when (@rem-support = true) {
+		font-size: @pixel-font-size / @base;
+	}
+
+	& when (@rem-support = false) {
+		font-size: @pixel-font-size;
+	}
+}

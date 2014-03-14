@@ -1,0 +1,5 @@
+{
+	"watch": false,
+	"theme": "cotton",
+	"globals": ["_mixins.less", "_globals.less"]
+}
