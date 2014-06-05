@@ -8,7 +8,7 @@ A custom LESS compiler for Bladerunner apps
 
 - Install by running
 
-	`npm i -g briandipalma/motif-less-compiler#1.2.0`
+	`npm i -g briandipalma/motif-less-compiler#1.2.1`
 
 - Then `cd` into the root of your application e.g. `fxtrader` for the FxMotif.
 
