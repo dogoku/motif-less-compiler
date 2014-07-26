@@ -1,5 +1,5 @@
-![](https://david-dm.org/briandipalma/motif-less-compiler.png)
 [![Build Status](https://travis-ci.org/dogoku/motif-less-compiler.png)](https://travis-ci.org/dogoku/motif-less-compiler)
+[![Dependency Status](https://david-dm.org/dogoku/motif-less-compiler.svg)](https://david-dm.org/dogoku/motif-less-compiler)
 
 
 #Motif LESS compiler
