@@ -1,4 +1,6 @@
 ![](https://david-dm.org/briandipalma/motif-less-compiler.png)
+[![Build Status](https://travis-ci.org/dogoku/motif-less-compiler.png)](https://travis-ci.org/simkimsia/UtilityBehaviors)
+
 
 #Motif LESS compiler
 
