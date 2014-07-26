@@ -15,5 +15,15 @@
     "undef": true,
     "unused": true,
     "strict": true,
-    "trailing": true
+    "trailing": true,
+
+    "globals"   : {
+        /* MOCHA */
+        "describe"   : false,
+        "it"         : false,
+        "before"     : false,
+        "beforeEach" : false,
+        "after"      : false,
+        "afterEach"  : false
+    }
 }
