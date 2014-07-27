@@ -1,9 +1,16 @@
 {
 	"watch": true,
-	"theme": "cotton",
 	"autoprefix": ["last 2 versions", "ie 8", "Firefox ESR"],
 	"globals": [
 		"less/_variables.less",
 		"less/_mixins.less"
+	],
+	"filterfiles": [
+		"**/less/**"
+	],
+	"filterfolders" : [
+		"!**/node_modules",
+		"!**/.git",
+		"!**/.svn"
 	]
 }

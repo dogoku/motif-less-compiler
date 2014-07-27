@@ -4,19 +4,24 @@
 
 #Motif LESS compiler
 
-A custom LESS compiler for Bladerunner apps
+A custom LESS compiler with the following features:
+- File watching - watch for .less file changes and recompile the file and all it's dependants
+- Global imports - Specify files to be imported into every LESS file
+- Filtering - Add include or ignore filters for directories and files, using [glob patterns][gp]
+- Autoprefix - Auto browser prefixing, using the awesome [Autoprefixer][ai]
+- Bladerunner Themes - Built in support for [BladerunnerJS][BRJS] themes
 
 ##Usage
 
 - Install by running
 
-	`npm i -g briandipalma/motif-less-compiler#v1.2.1`
+	`npm i -g dogoku/motif-less-compiler#v1.2.1`
 
 - Then `cd` into the root of your application e.g. `fxtrader` for the FxMotif.
 
 - Execute
 
-	`motif-less-compiler`
+	`motif-less-compiler [arguments]`
 
 **Note that:**
 Only errors generate console output, successful runs produce no output.
@@ -33,9 +38,9 @@ The compiler accepts a number of arguments either passed from the command line o
 |`-c, --config`    | Path to config file                       | Path    | `./less_config.json` | Done    |
 |`-g, --globals`   | Global import files                       | Boolean | **false**            | Done    |
 |`-h, --help`      | Show usage and help information           | Boolean | **false**            | Done    |
-|`--ignorefiles`   | Ignore files with the given filenames     | Array   | Empty Array          | Backlog |
-|`--ignorefolders` | Ignore folders in the given array         | Array   | Empty Array          | Backlog |
-|`-t, --theme`     | Name of a Bladerunner theme to use        | Boolean | `cotton`             | Backlog |
+|`--filterfiles`   | Filter files using [glob patterns][gp]    | Array   | Empty Array          | Done    |
+|`--filterfolders` | Filter folders using [glob patterns][gp]  | Array   | Empty Array          | Done    |
+|`-t, --theme`     | Name of a Bladerunner theme to use        | Boolean | `cotton`             | Done    |
 |`-v, --verbose`   | Verbose mode                              | Boolean | **false**            | Backlog |
 |`-w, --watch`     | Watch directory for changes to LESS files | Boolean | **false**            | Done    |
 
@@ -51,6 +56,19 @@ You can force booleans to false, by using `no-`
 
 You can use declare the same argument multiple times for arrays
 
+####Filter Patterns
+
+We are using the [minimatch][mn] glob matcher to power our directory and file filtering.
+
+Matching is done against the **absolute paths** of files and directories,
+so write your glob patterns appropriately.
+
+Here's a quick list with example filters
+
+ - `**/styles/**` - match all files that are under a `styles` directory or it's subfolders
+ - `**/*.less` - match all less files
+ -  `!**/_*.less` - exclude all .less starting with an `_`
+
 ###Config file
 
 The config file, must contain a single JSON object.
@@ -65,8 +83,8 @@ Config.js
 
 	{
 		"watch": false,
-		"ignoreFolders":[ ".svn", ".git", "node_modules" ],
-		"ignoreFiles": [ "variables.less", "mixins.less" ],
+		"filterfolder":[ "**/.svn", "**/.git", "**/node_modules" ],
+		"filterfiles": [ "**/styles/**",  "!**/_*.less"],
 		"theme": "cotton",
 		"globals":[
 			"/default-aspect/themes/cotton/ontology/variables.less",
@@ -125,10 +143,36 @@ To run the tests, `cd` to the repo directory and run
 - Every Pull Request should atleast pass [Travis CI][travis] in order to be accepted
 
 
+##Credits
+
+###Third Party Libs
+
+This project uses the following open source libraries. Check them out!
+
+- [Autoprefixer][ai] for cross browser awesomeness
+- [Bluebird][bb] for pimping out our code with promises
+- [Chokidar][chok] for file watching on steroids
+- [Dependency-Graph][dg] for monitoring import file dependencies
+- [minimatch][mn] for file filtering on steroids
+- [yargs][yaar] for argument parsing sweeter than rum
+- [Mocha][mocha] and [Chai][chai] for testing
+
+> Made with `<3` and lots of coffee by [@briandipalma][brian] and [@dogoku][dogoku]
+
+
 <!--- Link References -->
 [ai]: https://github.com/ai/autoprefixer
-[inspector]: https://github.com/node-inspector/node-inspector
-[mocha]: http://visionmedia.github.io/mocha/
+[bb]: https://github.com/petkaantonov/bluebird
+[brian]: https://github.com/briandpalma
+[BRJS]: https://github.com/BladeRunnerJS/brjs
 [chai]: http://chaijs.com/
+[chok]: https://github.com/paulmillr/chokidar
+[dg]: https://github.com/jriecken/dependency-graph
+[dogoku]: https://github.com/dogoku
+[inspector]: https://github.com/node-inspector/node-inspector
+[gp]: #filter-patterns
+[mn]: https://github.com/isaacs/minimatch
+[mocha]: http://visionmedia.github.io/mocha/
 [pr]: http://code.tutsplus.com/articles/team-collaboration-with-github--net-29876
 [travis]: https://travis-ci.org/
+[yaar]: https://github.com/chevex/yargs

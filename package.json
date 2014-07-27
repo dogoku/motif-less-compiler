@@ -20,6 +20,7 @@
     "dependency-graph": "~0.1.0",
     "fell": "~0.0.2",
     "less": "~1.7.0",
+    "minimatch": "~0.4.0",
     "yargs": "~1.2.1"
   },
   "devDependencies": {
