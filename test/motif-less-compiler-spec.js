@@ -2,7 +2,7 @@
 
 var expect = require("chai").expect;
 
-describe("root", function() {
+describe("motif-less-compiler", function() {
 	it("should work", function() {
 		expect(true).to.equal(true);
 	});
