@@ -163,7 +163,7 @@ This project uses the following open source libraries. Check them out!
 <!--- Link References -->
 [ai]: https://github.com/ai/autoprefixer
 [bb]: https://github.com/petkaantonov/bluebird
-[brian]: https://github.com/briandpalma
+[brian]: https://github.com/briandipalma
 [BRJS]: https://github.com/BladeRunnerJS/brjs
 [chai]: http://chaijs.com/
 [chok]: https://github.com/paulmillr/chokidar
