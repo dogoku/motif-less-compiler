@@ -27,14 +27,17 @@ The compiler accepts a number of arguments either passed from the command line o
 
 ###Command line arguments
 
+[ai]: https://github.com/ai/autoprefixer
+
+
 | Argument           | Description                                  | Type    | Default              | Status         |
 |:-------------------|:---------------------------------------------|:--------|:--------------------:|:--------------:|
-|`--autoprefix`      | Add auto-prefixer functionality to compiler  | Boolean | **false**            | Backlog        |
+|`--autoprefix`      | [Autoprefixer][ai] browser configuration     | Array   | Empty Array          | In Development |
 |`-c, --config`      | Path to config file                          | Path    | `./less_config.json` | Done           |
 |`-g, --globals`     | Global import files                          | Boolean | **false**            | Done           |
 |`-h, --help`        | Show usage and help information              | Boolean | **false**            | Done           |
-|`--ignorefiles`     | Ignore files with the given filenames        | Array   | `null`               | Backlog        |
-|`--ignorefolders`   | Ignore folders in the given array            | Array   | `null`               | Backlog        |
+|`--ignorefiles`     | Ignore files with the given filenames        | Array   | Empty Array          | Backlog        |
+|`--ignorefolders`   | Ignore folders in the given array            | Array   | Empty Array          | Backlog        |
 |`-t, --theme`       | Name of a Bladerunner theme to use           | Boolean | `cotton`             | Backlog        |
 |`-v, --verbose`     | Verbose mode                                 | Boolean | **false**            | Backlog        |
 |`-w, --watch`       | Watch directory for changes to LESS files    | Boolean | **false**            | Done           |

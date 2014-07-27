@@ -14,9 +14,10 @@
     "url": "https://github.com/briandipalma/motif-less-compiler/issues"
   },
   "dependencies": {
+    "autoprefixer": "~2.1.1",
     "bluebird": "~2.2.2",
     "chokidar": "~0.8.1",
-    "dependency-graph": "^0.1.0",
+    "dependency-graph": "~0.1.0",
     "fell": "~0.0.2",
     "less": "~1.7.0",
     "yargs": "~1.2.1"
