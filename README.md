@@ -27,20 +27,17 @@ The compiler accepts a number of arguments either passed from the command line o
 
 ###Command line arguments
 
-[ai]: https://github.com/ai/autoprefixer
-
-
-| Argument           | Description                                  | Type    | Default              | Status         |
-|:-------------------|:---------------------------------------------|:--------|:--------------------:|:--------------:|
-|`--autoprefix`      | [Autoprefixer][ai] browser configuration     | Array   | Empty Array          | In Development |
-|`-c, --config`      | Path to config file                          | Path    | `./less_config.json` | Done           |
-|`-g, --globals`     | Global import files                          | Boolean | **false**            | Done           |
-|`-h, --help`        | Show usage and help information              | Boolean | **false**            | Done           |
-|`--ignorefiles`     | Ignore files with the given filenames        | Array   | Empty Array          | Backlog        |
-|`--ignorefolders`   | Ignore folders in the given array            | Array   | Empty Array          | Backlog        |
-|`-t, --theme`       | Name of a Bladerunner theme to use           | Boolean | `cotton`             | Backlog        |
-|`-v, --verbose`     | Verbose mode                                 | Boolean | **false**            | Backlog        |
-|`-w, --watch`       | Watch directory for changes to LESS files    | Boolean | **false**            | Done           |
+| Argument         | Description                               | Type    | Default              | Status  |
+|:-----------------|:------------------------------------------|:--------|:--------------------:|:-------:|
+|`--autoprefix`    | [Autoprefixer][ai] browser configuration  | Array   | Empty Array          | Done    |
+|`-c, --config`    | Path to config file                       | Path    | `./less_config.json` | Done    |
+|`-g, --globals`   | Global import files                       | Boolean | **false**            | Done    |
+|`-h, --help`      | Show usage and help information           | Boolean | **false**            | Done    |
+|`--ignorefiles`   | Ignore files with the given filenames     | Array   | Empty Array          | Backlog |
+|`--ignorefolders` | Ignore folders in the given array         | Array   | Empty Array          | Backlog |
+|`-t, --theme`     | Name of a Bladerunner theme to use        | Boolean | `cotton`             | Backlog |
+|`-v, --verbose`   | Verbose mode                              | Boolean | **false**            | Backlog |
+|`-w, --watch`     | Watch directory for changes to LESS files | Boolean | **false**            | Done    |
 
 ####Example usage
 
@@ -79,6 +76,8 @@ Config.js
 
 ##Development
 
+###Linking to npm
+
 Remove any previously installed version
 
 	`npm r -g motif-less-compiler`
@@ -97,3 +96,39 @@ If you want to make a PR to the repo fork it.
 - Now when you execute `motif-less-compiler` your local cloned repo will be used.
 
 - Work away.
+
+###Debugging
+
+In order to debug a nodejs app, you need to install [Node Inspector][inspector]
+
+	`npm install -g node-inspector`
+
+Once node-inspector is installed you can debug the app, by running the CLI script using `node-debug`
+
+	`node-debug bin/motif-less-compiler-cli.js`
+
+Keep in mind that all paths will be relative to your current working directory.
+
+###Testing
+
+ Add any tests you have inside the `test` directory.
+- Tests are setup to use [Mocha][mocha] as the test runner and [Chai][chai] as the assertion library
+
+To run the tests, `cd` to the repo directory and run
+
+	npm test
+
+###Commiting changes
+
+- Simply fork the repo on github, make changes and create a [Pull Request][pr].
+
+- Every Pull Request should atleast pass [Travis CI][travis] in order to be accepted
+
+
+<!--- Link References -->
+[ai]: https://github.com/ai/autoprefixer
+[inspector]: https://github.com/node-inspector/node-inspector
+[mocha]: http://visionmedia.github.io/mocha/
+[chai]: http://chaijs.com/
+[pr]: http://code.tutsplus.com/articles/team-collaboration-with-github--net-29876
+[travis]: https://travis-ci.org/
