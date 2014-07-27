@@ -31,13 +31,13 @@ The compiler accepts a number of arguments either passed from the command line o
 |:-------------------|:---------------------------------------------|:--------|:--------------------:|:--------------:|
 |`--autoprefix`      | Add auto-prefixer functionality to compiler  | Boolean | **false**            | Backlog        |
 |`-c, --config`      | Path to config file                          | Path    | `./less_config.json` | Done           |
-|`-g, --globals`     | Global import files                          | Boolean | **false**            | In development |
+|`-g, --globals`     | Global import files                          | Boolean | **false**            | Done           |
 |`-h, --help`        | Show usage and help information              | Boolean | **false**            | Done           |
 |`--ignorefiles`     | Ignore files with the given filenames        | Array   | `null`               | Backlog        |
 |`--ignorefolders`   | Ignore folders in the given array            | Array   | `null`               | Backlog        |
 |`-t, --theme`       | Name of a Bladerunner theme to use           | Boolean | `cotton`             | Backlog        |
 |`-v, --verbose`     | Verbose mode                                 | Boolean | **false**            | Backlog        |
-|`-w, --watch`       | Watch directory for changes to LESS files    | Boolean | **false**            | In development |
+|`-w, --watch`       | Watch directory for changes to LESS files    | Boolean | **false**            | Done           |
 
 ####Example usage
 
@@ -53,11 +53,11 @@ You can use declare the same argument multiple times for arrays
 
 ###Config file
 
-The config.js file, is a JSON file with the configuration
-The arguments must be declared using their **long** format.
+The config file, must contain a single JSON object.
+The object's keys must match the CLI arguments' **long** format.
 
 
-####Example usage with config.js
+####Example usage with config file
 
 	motif-less-compiler -c path/to/my-config.js
 
