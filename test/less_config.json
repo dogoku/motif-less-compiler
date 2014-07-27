@@ -1,5 +1,8 @@
 {
-	"watch": false,
+	"watch": true,
 	"theme": "cotton",
-	"globals": ["_mixins.less", "_globals.less"]
+	"globals": [
+		"less/_variables.less",
+		"less/_mixins.less"
+	]
 }
