@@ -41,7 +41,7 @@ The compiler accepts a number of arguments either passed from the command line o
 |`--filterfiles`   | Filter files using [glob patterns][gp]    | Array   | Empty Array          | Done    |
 |`--filterfolders` | Filter folders using [glob patterns][gp]  | Array   | Empty Array          | Done    |
 |`-t, --theme`     | Name of a Bladerunner theme to use        | Boolean | `cotton`             | Done    |
-|`-v, --verbose`   | Verbose mode                              | Boolean | **false**            | Backlog |
+|`-v, --verbose`   | Verbose: `0-silent` `1-low` `2-noisy`     | Integer | 1 - Low              | In DEV  |
 |`-w, --watch`     | Watch directory for changes to LESS files | Boolean | **false**            | Done    |
 
 ####Example usage
@@ -138,9 +138,9 @@ To run the tests, `cd` to the repo directory and run
 
 ###Commiting changes
 
-- Simply fork the repo on github, make changes and create a [Pull Request][pr].
+Simply fork the repo on github, make changes and create a Pull Request.
 
-- Every Pull Request should atleast pass [Travis CI][travis] in order to be accepted
+Here's a [quick guide][pr] on how to do that
 
 
 ##Credits
@@ -174,5 +174,4 @@ This project uses the following open source libraries. Check them out!
 [mn]: https://github.com/isaacs/minimatch
 [mocha]: http://visionmedia.github.io/mocha/
 [pr]: http://code.tutsplus.com/articles/team-collaboration-with-github--net-29876
-[travis]: https://travis-ci.org/
 [yaar]: https://github.com/chevex/yargs
