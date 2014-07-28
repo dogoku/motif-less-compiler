@@ -2,7 +2,7 @@
 [![Dependency Status](https://david-dm.org/dogoku/motif-less-compiler.svg)](https://david-dm.org/dogoku/motif-less-compiler)
 
 
-#Motif LESS compiler
+#Motif LESS compiler v1.3.0
 
 A custom LESS compiler with the following features:
 - File watching - watch for .less file changes and recompile the file and all it's dependants
@@ -15,7 +15,7 @@ A custom LESS compiler with the following features:
 
 - Install by running
 
-	`npm i -g dogoku/motif-less-compiler#v1.2.1`
+	`npm i -g dogoku/motif-less-compiler#1.3.0`
 
 - Then `cd` into the root of your application e.g. `fxtrader` for the FxMotif.
 
