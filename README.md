@@ -36,10 +36,10 @@ The compiler accepts a number of arguments either passed from the command line o
 |:-----------------|:------------------------------------------|:--------|:--------------------:|:-------:|
 |`--autoprefix`    | [Autoprefixer][ai] browser configuration  | Array   | Empty Array          | Done    |
 |`-c, --config`    | Path to config file                       | Path    | `./less_config.json` | Done    |
-|`-g, --globals`   | Global import files                       | Boolean | **false**            | Done    |
-|`-h, --help`      | Show usage and help information           | Boolean | **false**            | Done    |
 |`--filterfiles`   | Filter files using [glob patterns][gp]    | Array   | Empty Array          | Done    |
 |`--filterfolders` | Filter folders using [glob patterns][gp]  | Array   | Empty Array          | Done    |
+|`-g, --globals`   | Paths to global import files              | Boolean | **false**            | Done    |
+|`-h, --help`      | Show usage and help information           | Boolean | **false**            | Done    |
 |`-t, --theme`     | Name of a Bladerunner theme to use        | Boolean | `cotton`             | Done    |
 |`-v, --verbose`   | Verbose: `0-silent` `1-low` `2-noisy`     | Integer | 1 - Low              | In DEV  |
 |`-w, --watch`     | Watch directory for changes to LESS files | Boolean | **false**            | Done    |
@@ -150,10 +150,10 @@ Here's a [quick guide][pr] on how to do that
 This project uses the following open source libraries. Check them out!
 
 - [Autoprefixer][ai] for cross browser awesomeness
-- [Bluebird][bb] for pimping out our code with promises
+- [Bluebird][bb] for promises of hapiness
 - [Chokidar][chok] for file watching on steroids
-- [Dependency-Graph][dg] for monitoring import file dependencies
-- [minimatch][mn] for file filtering on steroids
+- [Dependency-Graph][dg] for keeping up with the dependencies
+- [minimatch][mn] for file filtering like a pro
 - [yargs][yaar] for argument parsing sweeter than rum
 - [Mocha][mocha] and [Chai][chai] for testing
 
