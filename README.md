@@ -172,6 +172,6 @@ This project uses the following open source libraries. Check them out!
 [inspector]: https://github.com/node-inspector/node-inspector
 [gp]: #filter-patterns
 [mn]: https://github.com/isaacs/minimatch
-[mocha]: http://visionmedia.github.io/mocha/
+[mocha]: http://mochajs.org/
 [pr]: http://code.tutsplus.com/articles/team-collaboration-with-github--net-29876
 [yaar]: https://github.com/chevex/yargs
